@@ -18,6 +18,7 @@ class CourseSerializer(serializers.ModelSerializer):
 class EnrolledCourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = EnrolledCourse
+        depth = 1
         fields = ['student', 'course']
 
 

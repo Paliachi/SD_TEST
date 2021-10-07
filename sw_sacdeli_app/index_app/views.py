@@ -16,12 +16,18 @@ class StudentViewSet(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = Student.objects.all()
-        # enrolled_courses_queryset = EnrolledCourse.objects.all()
+        enrolled_courses_queryset = EnrolledCourse.objects.all()
 
         serializer = StudentSerializer(queryset, many=True)
-        # enrolled_courses_serializer = EnrolledCourseSerializer(enrolled_courses_queryset, many=True)
+        enrolled_courses_serializer = EnrolledCourseSerializer(enrolled_courses_queryset, many=True)
+        st_ser = serializer.data.copy()
+        cr_ser = enrolled_courses_serializer.data.copy()
 
-        return Response(serializer.data)
+        for st in st_ser:
+            st['course(s)'] = [cr['course'] for cr in cr_ser if cr['student']['id'] == st['id']]
+        print(st_ser)
+
+        return Response(st_ser)
 
 
 

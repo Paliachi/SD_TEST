@@ -1,0 +1,17 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "course_name": "English",
+      "course_description": "something about English",
+      "professor": "Yan Pentenko"
+    },
+    {
+      "course_name": "French",
+      "course_description": "something about french",
+      "professor": "Jo Boom"
+    }
+  ]
+}

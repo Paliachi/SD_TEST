@@ -3,25 +3,24 @@ from rest_framework import routers
 from django.urls import path, include
 
 # from .views import StudentViewSet, CourseViewSet
-from .views import StudentViewSet
+from .views import StudentViewSet, CourseViewSet, EnrolledCourseViewSet
 
-# router = routers.DefaultRouter()
-# router.register('students', StudentViewSet)
-# router.register('courses', CourseViewSet)
+router = routers.DefaultRouter()
+router.register('students', StudentViewSet)
+router.register('courses', CourseViewSet)
+router.register('enrolled-courses', EnrolledCourseViewSet)
 
-urlpatterns = [
-    path('students/', StudentViewSet.as_view({'get': 'list'})),
-    path('create-student/', StudentViewSet.as_view({'post': 'create'})),
-    path('change-student/<int:pk>', StudentViewSet.as_view({'put': 'update'})),
-]
+urlpatterns = router.urls
 
 # urlpatterns = [
-#     path('', include(router.urls)),
-#     path('api-students/', include('rest_framework.urls', namespace='rest_framework'))
-# ]
-
-# urlpatterns = [
-#     path('students/', student_list, name='students'),
-#     path('student-detail/<int:pk>', student_detail, name='student_detail'),
+#     # path('students', StudentViewSet.as_view({'get': 'list', 'post': 'create', 'put': 'update'}), name='students'),
+#     # path('create-student/', StudentViewSet.as_view({'put': 'create'}), name='create_student'),
+#     # path('change-student/<int:pk>', StudentViewSet.as_view({}), name='change_student'),
+#
+#
+#     path('courses/', CourseViewSet.as_view({'get': 'list'}), name='courses'),
+#     path('create-course/', CourseViewSet.as_view({'post': 'create'}), name='create_course'),
+#
 #
 # ]
+

@@ -108,3 +108,7 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
+# stop http files
+
+*.http
+

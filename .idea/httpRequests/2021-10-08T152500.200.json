@@ -1,0 +1,82 @@
+{
+  "count": 5,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "student": {
+        "id": 1,
+        "name": "banana",
+        "email": "banana@gmail.com",
+        "phone": "444444444"
+      },
+      "course": {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    },
+    {
+      "id": 2,
+      "student": {
+        "id": 3,
+        "name": "Nika",
+        "email": "nika@gmail.com",
+        "phone": "444444444"
+      },
+      "course": {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    },
+    {
+      "id": 3,
+      "student": {
+        "id": 3,
+        "name": "Nika",
+        "email": "nika@gmail.com",
+        "phone": "444444444"
+      },
+      "course": {
+        "id": 2,
+        "course_name": "French",
+        "course_description": "something about french",
+        "professor": "Jo Boom"
+      }
+    },
+    {
+      "id": 4,
+      "student": {
+        "id": 3,
+        "name": "Nika",
+        "email": "nika@gmail.com",
+        "phone": "444444444"
+      },
+      "course": {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    },
+    {
+      "id": 5,
+      "student": {
+        "id": 4,
+        "name": "Tiko",
+        "email": "tiko@gmail.com",
+        "phone": "555555555"
+      },
+      "course": {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    }
+  ]
+}

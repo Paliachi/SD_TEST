@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 
@@ -13,6 +13,7 @@ from .serializer import StudentSerializer, CourseSerializer, EnrolledCourseSeria
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+    permission_classes = (permissions.AllowAny,)
 
     def list(self, request, *args, **kwargs):
         queryset = Student.objects.all()
@@ -30,11 +31,16 @@ class StudentViewSet(viewsets.ModelViewSet):
         return Response(st_ser)
 
 
+class CourseViewSet(viewsets.ModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+    permission_classes = (permissions.AllowAny,)
 
 
-# class CourseViewSet(viewsets.ModelViewSet):
-#     queryset = Course.objects.all()
-#     serializer_class = CourseSerializer
+class EnrolledCourseViewSet(viewsets.ModelViewSet):
+    queryset = EnrolledCourse.objects.all()
+    serializer_class = EnrolledCourseSerializer
+    permission_classes = (permissions.AllowAny,)
 
 
 # @csrf_exempt

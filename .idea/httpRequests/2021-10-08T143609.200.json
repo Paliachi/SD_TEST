@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "banana",
+    "email": "banana@gmail.com",
+    "phone": "444444444",
+    "course(s)": [
+      {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nata",
+    "email": "nata@gmail.com",
+    "phone": "888888888",
+    "course(s)": []
+  },
+  {
+    "id": 3,
+    "name": "Nika",
+    "email": "nika@gmail.com",
+    "phone": "444444444",
+    "course(s)": [
+      {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      },
+      {
+        "id": 2,
+        "course_name": "French",
+        "course_description": "something about french",
+        "professor": "Jo Boom"
+      },
+      {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Tiko",
+    "email": "tiko@gmail.com",
+    "phone": "555555555",
+    "course(s)": [
+      {
+        "id": 1,
+        "course_name": "English",
+        "course_description": "something about English",
+        "professor": "Yan Pentenko"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "salo",
+    "email": "salo@gmail.com",
+    "phone": "111111111",
+    "course(s)": []
+  },
+  {
+    "id": 6,
+    "name": "mchadi",
+    "email": "mchadi@gmail.com",
+    "phone": "444444544",
+    "course(s)": []
+  },
+  {
+    "id": 7,
+    "name": "mchadi",
+    "email": "mchadi@gmail.com",
+    "phone": "444444544",
+    "course(s)": []
+  },
+  {
+    "id": 8,
+    "name": "mchadi",
+    "email": "mchadi@gmail.com",
+    "phone": "444444544",
+    "course(s)": []
+  },
+  {
+    "id": 9,
+    "name": "lobio",
+    "email": "mchadi@gmail.com",
+    "phone": "444444544",
+    "course(s)": []
+  }
+]

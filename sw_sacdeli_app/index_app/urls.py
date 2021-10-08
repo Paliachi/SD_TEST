@@ -3,12 +3,12 @@ from rest_framework import routers
 from django.urls import path, include
 
 # from .views import StudentViewSet, CourseViewSet
-from .views import StudentViewSet, CourseViewSet, EnrolledCourseViewSet
+from .views import StudentViewSet, CourseViewSet
 
 router = routers.DefaultRouter()
 router.register('students', StudentViewSet)
 router.register('courses', CourseViewSet)
-router.register('enrolled-courses', EnrolledCourseViewSet)
+
 
 urlpatterns = router.urls
 

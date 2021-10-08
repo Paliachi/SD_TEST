@@ -6,8 +6,8 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Student, Course, EnrolledCourse
-from .serializer import StudentSerializer, CourseSerializer, EnrolledCourseSerializer
+from .models import Student, Course
+from .serializer import StudentSerializer, CourseSerializer
 
 
 class StudentViewSet(viewsets.ModelViewSet):
@@ -15,31 +15,25 @@ class StudentViewSet(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     permission_classes = (permissions.AllowAny,)
 
-    def list(self, request, *args, **kwargs):
-        queryset = Student.objects.all()
-        enrolled_courses_queryset = EnrolledCourse.objects.all()
-
-        serializer = StudentSerializer(queryset, many=True)
-        enrolled_courses_serializer = EnrolledCourseSerializer(enrolled_courses_queryset, many=True)
-        st_ser = serializer.data.copy()
-        cr_ser = enrolled_courses_serializer.data.copy()
-
-        for st in st_ser:
-            st['course(s)'] = [cr['course'] for cr in cr_ser if cr['student']['id'] == st['id']]
-        print(st_ser)
-
-        return Response(st_ser)
+    # def list(self, request, *args, **kwargs):
+    #     queryset = Student.objects.all()
+    #     enrolled_courses_queryset = EnrolledCourse.objects.all()
+    #
+    #     serializer = StudentSerializer(queryset, many=True)
+    #     enrolled_courses_serializer = EnrolledCourseSerializer(enrolled_courses_queryset, many=True)
+    #     st_ser = serializer.data.copy()
+    #     cr_ser = enrolled_courses_serializer.data.copy()
+    #
+    #     for st in st_ser:
+    #         st['course(s)'] = [cr['course'] for cr in cr_ser if cr['student']['id'] == st['id']]
+    #     print(st_ser)
+    #
+    #     return Response(st_ser)
 
 
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    permission_classes = (permissions.AllowAny,)
-
-
-class EnrolledCourseViewSet(viewsets.ModelViewSet):
-    queryset = EnrolledCourse.objects.all()
-    serializer_class = EnrolledCourseSerializer
     permission_classes = (permissions.AllowAny,)
 
 

@@ -2,7 +2,6 @@ from rest_framework import routers
 
 from django.urls import path, include
 
-# from .views import StudentViewSet, CourseViewSet
 from .views import StudentViewSet, CourseViewSet
 
 router = routers.DefaultRouter()

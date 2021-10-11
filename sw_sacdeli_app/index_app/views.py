@@ -1,6 +1,7 @@
 from rest_framework import viewsets, permissions
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
+import logging
 
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
@@ -10,10 +11,14 @@ from .models import Student, Course
 from .serializer import StudentSerializer, CourseSerializer
 
 
+logger = logging.getLogger(__name__)
+
+
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     permission_classes = (permissions.AllowAny,)
+    logger.warning('jandabas joni')
 
     # def list(self, request, *args, **kwargs):
     #     queryset = Student.objects.all()
